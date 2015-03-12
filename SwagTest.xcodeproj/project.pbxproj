@@ -15,7 +15,6 @@
 		520413021A9A4A8C00703C5C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520413001A9A4A8C00703C5C /* LaunchScreen.xib */; };
 		5204130E1A9A4A8C00703C5C /* SwagTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5204130D1A9A4A8C00703C5C /* SwagTestTests.m */; };
 		5269BA621A9A53F800609251 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5269BA611A9A53F800609251 /* ImageIO.framework */; };
-		5269BA641A9A5B2F00609251 /* sunglasses.png in Resources */ = {isa = PBXBuildFile; fileRef = 5269BA631A9A5B2F00609251 /* sunglasses.png */; };
 		52CD51781A9FAD2C00C59B6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD51771A9FAD2C00C59B6E /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		5204130C1A9A4A8C00703C5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5204130D1A9A4A8C00703C5C /* SwagTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwagTestTests.m; sourceTree = "<group>"; };
 		5269BA611A9A53F800609251 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		5269BA631A9A5B2F00609251 /* sunglasses.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunglasses.png; sourceTree = "<group>"; };
 		52CD51771A9FAD2C00C59B6E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +86,6 @@
 		520412F01A9A4A8C00703C5C /* SwagTest */ = {
 			isa = PBXGroup;
 			children = (
-				5269BA631A9A5B2F00609251 /* sunglasses.png */,
 				520412F51A9A4A8C00703C5C /* AppDelegate.h */,
 				520412F61A9A4A8C00703C5C /* AppDelegate.m */,
 				520412F81A9A4A8C00703C5C /* ViewController.h */,
@@ -210,7 +207,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				520412FD1A9A4A8C00703C5C /* Main.storyboard in Resources */,
-				5269BA641A9A5B2F00609251 /* sunglasses.png in Resources */,
 				520413021A9A4A8C00703C5C /* LaunchScreen.xib in Resources */,
 				520412FF1A9A4A8C00703C5C /* Images.xcassets in Resources */,
 			);
