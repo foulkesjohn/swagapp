@@ -20,7 +20,7 @@ class SwagViewController: UIViewController, UIImagePickerControllerDelegate, UIN
   }
   
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-    let image = info[UIImagePickerControllerEditedImage] as! UIImage
+    let image = info[UIImagePickerControllerEditedImage] as UIImage
     let sunglassesImage = self.imageByAddingGlasses(image)
     imageView?.image = self.imageByAddingText("SWAG", image: sunglassesImage)
     picker.dismissViewControllerAnimated(true, completion: nil)
@@ -80,11 +80,11 @@ class SwagViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let opts = [CIDetectorAccuracy:CIDetectorAccuracyHigh]
     let detector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: opts)
     let options = [CIDetectorImageOrientation: image.imageOrientation]
-    return detector.featuresInImage(coreImage) as! [CIFeature]
+    return detector.featuresInImage(coreImage) as [CIFeature]
   }
   
   func faceFeature(image: UIImage) -> CIFaceFeature {
-    return features(image).first as! CIFaceFeature
+    return features(image).first as CIFaceFeature
   }
   
   func eyePosition(image: UIImage) -> CGPoint {

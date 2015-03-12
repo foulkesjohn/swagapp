@@ -158,4 +158,9 @@
                      image.size.height - point.y);
 }
 
+- (UIBarPosition)barPosition
+{
+  return UIBarPositionTopAttached;
+}
+
 @end

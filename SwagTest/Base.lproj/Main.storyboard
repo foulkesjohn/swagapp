@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14B23" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8P8-RD-FVy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
-        <!--Swag View Controller-->
+        <!--SwagApp-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SwagViewController" customModule="SwagTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,41 +16,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SII-nm-whx">
-                                <rect key="frame" x="10" y="45" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="SII-nm-whx">
+                                <rect key="frame" x="200" y="124" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="XG7-K7-h7x"/>
+                                    <constraint firstAttribute="width" constant="200" id="c1G-Zy-vpT"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-bu-UaB">
-                                <rect key="frame" x="60" y="283" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6oS-bu-UaB">
+                                <rect key="frame" x="200" y="374" width="200" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2Im-To-PGm"/>
+                                    <constraint firstAttribute="height" constant="50" id="swA-1T-B0z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Choose Image">
+                                    <color key="titleColor" red="0.77647060160000003" green="0.03529411927" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="showImage" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aEE-aG-ej9"/>
+                                    <action selector="showImagePickerButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LPc-B1-XQn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tF-gX-ygv">
-                                <rect key="frame" x="90" y="328" width="40" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tF-gX-ygv">
+                                <rect key="frame" x="200" y="462" width="200" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BmT-T6-Kbl"/>
+                                    <constraint firstAttribute="width" constant="200" id="CJC-e3-tD4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Tweet">
+                                    <color key="titleColor" red="0.77647060160000003" green="0.03529411927" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="tweetButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DZh-cb-pXo"/>
+                                    <action selector="tweetButtonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dPi-Wk-zJS"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.7764706015586853" green="0.035294119268655777" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="4tF-gX-ygv" firstAttribute="top" secondItem="6oS-bu-UaB" secondAttribute="bottom" constant="38" id="2x7-cq-fQW"/>
+                            <constraint firstAttribute="centerX" secondItem="SII-nm-whx" secondAttribute="centerX" id="6mO-bg-JaQ"/>
+                            <constraint firstItem="6oS-bu-UaB" firstAttribute="top" secondItem="SII-nm-whx" secondAttribute="bottom" constant="50" id="87C-Xy-7mA"/>
+                            <constraint firstItem="SII-nm-whx" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="DH6-T6-CTg"/>
+                            <constraint firstAttribute="centerX" secondItem="6oS-bu-UaB" secondAttribute="centerX" id="cmw-DY-oy4"/>
+                            <constraint firstAttribute="centerX" secondItem="4tF-gX-ygv" secondAttribute="centerX" id="mdq-tj-Qwt"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SwagApp" id="fp9-rB-JYT"/>
                     <connections>
                         <outlet property="imageView" destination="SII-nm-whx" id="c3W-oj-f91"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1217" y="498"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="R8F-fd-pBg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8P8-RD-FVy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNE-96-xfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="UST-qE-fH3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G25-7E-BKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="498"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder" width="200" height="267"/>
+    </resources>
 </document>
